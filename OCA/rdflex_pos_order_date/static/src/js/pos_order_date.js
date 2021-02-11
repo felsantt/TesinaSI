@@ -1,10 +1,10 @@
 odoo.define('pos_order_date', function (require) {
 "use strict";
-var screens = require('point_of_sale.screens');
+var screens = require('pos_order_to_sale_order.screens');
 var posModel = require('point_of_sale.models');
 var fieldUtils = require('web.field_utils');
 
-var PaymentScreenWidget = screens.PaymentScreenWidget;
+var PaymentScreenWidget = screens.CreateSaleOrderScreenWidget;
 PaymentScreenWidget.include({
     renderElement: function () {
         this._super.apply(this, arguments);
