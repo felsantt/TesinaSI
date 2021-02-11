@@ -31,8 +31,8 @@ class SaleOrder(models.Model):
         sale_order.onchange_partner_id()
         # we rewrite data, because onchange could alter some
         # custom data (like pricelist)
-        order_vals.commitment_date = "2020-02-21"
         sale_order.write(order_vals)
+        
 
         # create Sale order lines
         for order_line_data in order_data["lines"]:
@@ -45,6 +45,7 @@ class SaleOrder(models.Model):
             # we rewrite data, because onchange could alter some
             # data (like quantity, or price)
             sale_order_line.write(order_line_vals)
+            
 
         # Confirm Sale Order
         if action in ["confirmed", "delivered"]:
