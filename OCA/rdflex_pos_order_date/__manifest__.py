@@ -14,7 +14,7 @@
     'category': 'Point of Sale',
     'license': 'OPL-1',
     'version': '1',
-    'depends': ['point_of_sale'],
+    'depends': ['point_of_sale', 'pos_order_to_sale_order'],
     'images': ['static/description/banner.jpg'],
     'data': [
         'views/pos_order_date_assets.xml',
